@@ -127,7 +127,7 @@ for i in range(0, len(followers)):
     data.append(row_data)
 
 #use it when the csv not exists
-file_path = "/Users/wangzhaoqi/Desktop/Practice/nft.csv"
+file_path = "/Users/wangzhaoqi/Desktop/Parse_Website/nft.csv"
 with open(file_path, "w", encoding="UTF8", newline="") as f:
     writer = csv.writer(f)
 
