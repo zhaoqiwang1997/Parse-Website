@@ -66,7 +66,7 @@ time.sleep(15)
 
 # get followers
 def followers_collector(followers, path, loop):
-    for i in range(1, loop+1):
+    for i in range(2, loop+1):
         new_path = path
         new_path_complete = new_path[:62] + str(i) + new_path[63:]
         followers.append(driver.find_element_by_css_selector(new_path_complete).text)
@@ -75,8 +75,8 @@ followers = []
 
 followers_collector(followers, "#socialblade-user-content > div:nth-child(11) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span", 14)
 
-followers.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(12) > div:nth-child(2) > span").text)
-followers.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(13) > div:nth-child(2) > span").text)
+# followers.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(12) > div:nth-child(2) > span").text)
+# followers.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(13) > div:nth-child(2) > span").text)
 
 print(followers)
 
@@ -84,7 +84,7 @@ time.sleep(15)
 
 # get date
 def date_collector(dates, path, loop):
-    for i in range(1, loop+1):
+    for i in range(2, loop+1):
         new_path = path
         new_path_complete = new_path[:62] + str(i) + new_path[63:]
         dates.append(driver.find_element_by_css_selector(new_path_complete).text)
@@ -93,8 +93,8 @@ dates = []
 
 date_collector(dates, "#socialblade-user-content > div:nth-child(11) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)", 14)
 
-dates.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(12) > div:nth-child(1)").text)
-dates.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(13) > div:nth-child(1)").text)
+# dates.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(12) > div:nth-child(1)").text)
+# dates.append(driver.find_element_by_css_selector("#socialblade-user-content > div:nth-child(13) > div:nth-child(1)").text)
 
 print(dates)
 
@@ -102,7 +102,7 @@ time.sleep(15)
 
 # get day of week
 def day_collector(dates, path, loop):
-    for i in range(1, loop+1):
+    for i in range(2, loop+1):
         new_path = path
         new_path_complete = new_path[:62] + str(i) + new_path[63:]
         days.append(driver.find_element_by_css_selector(new_path_complete).text)
@@ -110,8 +110,8 @@ def day_collector(dates, path, loop):
 days = []
 
 day_collector(days, "#socialblade-user-content > div:nth-child(11) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)", 14)
-days.append("")
-days.append("")
+# days.append("")
+# days.append("")
 print(days)
 
 time.sleep(15)
